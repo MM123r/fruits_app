@@ -13,7 +13,7 @@ class TermsAndConditionsWidget extends StatefulWidget {
   State<TermsAndConditionsWidget> createState() =>
       _TermsAndConditionsWidgetState();
 }
-
+ 
 class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
   bool isTermsAccepted = false;
   @override

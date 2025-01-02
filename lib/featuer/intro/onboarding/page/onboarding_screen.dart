@@ -5,7 +5,7 @@ import 'package:fruits/core/functions/navigation.dart';
 import 'package:fruits/core/utils/colors.dart';
 import 'package:fruits/core/utils/text_styles.dart';
 import 'package:fruits/core/widgets/custom_button.dart';
-import 'package:fruits/featuer/auth/presentation/views/login_view.dart';
+import 'package:fruits/featuer/auth/presentation/views/signin_view.dart';
 import 'package:fruits/featuer/intro/onboarding/model/onboarding_model.dart';
 import 'package:gap/gap.dart';
 
@@ -66,7 +66,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   padding: const EdgeInsets.all(16.0),
                                   child: TextButton(
                                       onPressed: () {
-                                        pushTo(context, LoginView());
+                                        pushTo(context, const SigninView());
                                       },
                                       child: Text(
                                         "تخط",
@@ -112,7 +112,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               text: "ابدأ الان",
               width: 250,
               onPressed: () {
-                pushTo(context, LoginView());
+                pushTo(context,const SigninView());
               },
             ),
           const Gap(20),
