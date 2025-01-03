@@ -10,6 +10,11 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class FirebaseAuthService {
+  // delete user
+  Future deleteUser() async {
+    await FirebaseAuth.instance.currentUser!.delete();
+  }
+
   // register
   Future<User> createUserWithEmailAndPassword(
       {required String email, required String password}) async {
@@ -110,7 +115,7 @@ class FirebaseAuthService {
   String generateNonce([int length = 32]) {
     const charset =
         '0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._';
-    final random =math.Random.secure();
+    final random = math.Random.secure();
     return List.generate(length, (_) => charset[random.nextInt(charset.length)])
         .join();
   }
@@ -147,6 +152,7 @@ class FirebaseAuthService {
 
     // Sign in the user with Firebase. If the nonce we generated earlier does
     // not match the nonce in `appleCredential.identityToken`, sign in will fail.
-    return (await FirebaseAuth.instance.signInWithCredential(oauthCredential)).user!;
+    return (await FirebaseAuth.instance.signInWithCredential(oauthCredential))
+        .user!;
   }
 }
