@@ -10,8 +10,8 @@ class BestSellingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
-      appBar: buildAppBar(context, title: 'الأكثر مبيعًا'),
-    body: BestSelingViewBody(),
+      appBar: buildAppBarAndNotificationWidget(context, title: 'الأكثر مبيعًا'),
+    body: const BestSelingViewBody(),
     );
   }
 

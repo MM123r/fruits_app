@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits/core/services/custom_bloc_observer.dart';
 import 'package:fruits/core/services/get_it_service.dart';
+import 'package:fruits/core/services/shared_preferences_singleton.dart';
 import 'package:fruits/featuer/home/presentation/views/home_view.dart';
 import 'package:fruits/featuer/intro/splash/splash_screen.dart';
 import 'package:fruits/firebase_options.dart';
@@ -14,6 +15,7 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await Prefs.init();
   setupGetit();
   runApp(const MainApp());
 }

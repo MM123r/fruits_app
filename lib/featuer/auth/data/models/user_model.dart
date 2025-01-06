@@ -28,4 +28,14 @@ class UserModel extends UserEntity {
       uId: user.uId,
     );
   }
+
+  
+
+    toMap() {
+    return {
+      'name': name,
+      'email': email,
+      'uId': uId,
+    };
+  }
 }

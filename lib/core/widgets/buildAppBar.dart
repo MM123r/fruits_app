@@ -1,16 +1,11 @@
  import 'package:flutter/material.dart';
 import 'package:fruits/core/utils/colors.dart';
 import 'package:fruits/core/utils/text_styles.dart';
-import 'package:fruits/core/widgets/notification_widget.dart';
 
-AppBar buildAppBarAndNotificationWidget(context,{required String title}) {
+
+AppBar buildAppBar(context,{required String title}) {
     return AppBar(
-      actions: const [
-        Padding(
-          padding: EdgeInsets.only(left: 16),
-          child: NotificationWidget(),
-        ),
-      ],
+     
       backgroundColor: AppColors.whiteColor,
       leading: GestureDetector(
           onTap: () {
