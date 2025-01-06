@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruits/featuer/auth/domain/entites/user_entity.dart';
 

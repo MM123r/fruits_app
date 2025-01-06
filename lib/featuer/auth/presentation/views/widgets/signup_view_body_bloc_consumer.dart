@@ -16,7 +16,9 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<SignupCubit, SignupState>(
       listener: (context, state) {
         //
-        if (state is SignupSuccess) {}
+        if (state is SignupSuccess) {
+          Navigator.pop(context); // عشان read data
+        }
         if (state is SignupFailuer) {
           buildErrorsBar(context, state.message);
         }
@@ -28,6 +30,4 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
       },
     );
   }
-
-
 }

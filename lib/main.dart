@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits/core/services/custom_bloc_observer.dart';
 import 'package:fruits/core/services/get_it_service.dart';
+import 'package:fruits/featuer/home/presentation/views/home_view.dart';
 import 'package:fruits/featuer/intro/splash/splash_screen.dart';
 import 'package:fruits/firebase_options.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -22,16 +23,18 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      localizationsDelegates: [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: [Locale("ar")],
-      locale: Locale("ar"),
-      debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+    return const SafeArea(
+      child: MaterialApp(
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: [Locale("ar")],
+        locale: Locale("ar"),
+        debugShowCheckedModeBanner: false,
+        home: SplashScreen(),
+      ),
     );
   }
 }

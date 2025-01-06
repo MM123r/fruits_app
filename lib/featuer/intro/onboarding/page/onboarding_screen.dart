@@ -5,7 +5,7 @@ import 'package:fruits/core/functions/navigation.dart';
 import 'package:fruits/core/utils/colors.dart';
 import 'package:fruits/core/utils/text_styles.dart';
 import 'package:fruits/core/widgets/custom_button.dart';
-import 'package:fruits/featuer/auth/presentation/views/signin_view.dart';
+import 'package:fruits/featuer/auth/presentation/views/pages/signin_view.dart';
 import 'package:fruits/featuer/intro/onboarding/model/onboarding_model.dart';
 import 'package:gap/gap.dart';
 

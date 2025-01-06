@@ -12,7 +12,7 @@ import 'package:fruits/core/widgets/custom_button.dart';
 import 'package:fruits/core/widgets/custom_text_form_field.dart';
 import 'package:fruits/core/widgets/password_field.dart';
 import 'package:fruits/featuer/auth/presentation/cubits/signin_cubit/signin_cubit.dart';
-import 'package:fruits/featuer/auth/presentation/views/register_view.dart';
+import 'package:fruits/featuer/auth/presentation/views/pages/register_view.dart';
 import 'package:fruits/featuer/auth/presentation/views/widgets/or_divider.dart';
 import 'package:fruits/featuer/auth/presentation/views/widgets/social_login_button.dart';
 import 'package:gap/gap.dart';
